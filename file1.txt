@@ -1,4 +1,4 @@
 commit -am
 new changess
 ammend worked
-
+amend working
