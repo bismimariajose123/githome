@@ -1,0 +1,209 @@
+1)git version
+git version 2.7.4
+
+2)  mkdir gitworks
+3)  cd gitworks/
+4)  git init
+Initialized empty Git repository in /home/bismi/gitworks/.git/
+5  ls -a          -> (lists hidden ..git files)
+.  ..  .git
+
+6)git config --global user.name "bismimariajose"  
+ git config --global user.email "josebismimaria@gmail.com"
+git config --global core.editor "gedit"
+
+
+
+7) git config --list
+user.name=bismimariajose
+user.email=josebismimaria@gmail.com
+user.editor=gedit
+core.editor=gedit
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+
+8)we can create multiple git repository in our system.
+so while specifying confi.. dont use --global .
+--global flag is used to set the config. to all git repos. initialised...
+
+9)git add .
+10)git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   gitdoc1
+
+11)git commit -m "initial commit gitdoc1"
+[master (root-commit) 0e98101] initial commit gitdoc1
+ 1 file changed, 31 insertions(+)
+ create mode 100644 gitdoc1
+
+12)git status
+On branch master
+nothing to commit, working directory clean
+
+VIDEO 3
+
+13) git log
+commit 580ff41cd56f04e4542b025060e0bafe18d4e574
+Author: bismimariajose <josebismimaria@gmail.com>
+Date:   Mon Mar 20 00:36:16 2017 +0530
+
+    added changes
+
+commit 0e98101cd3013e1ac4f8650fff01706a7c8adcbe
+Author: bismimariajose <josebismimaria@gmail.com>
+Date:   Mon Mar 20 00:27:11 2017 +0530
+
+    initial commit gitdoc1
+
+14)git log --oneline
+580ff41 added changes
+0e98101 initial commit gitdoc1
+
+15) git commit -a -m "changes added and commited"
+[master 6ea635e] changes added and commited
+ 1 file changed, 21 insertions(+)
+
+
+16)to remove file from staging index
+git rm --cached file1.txt 
+rm 'file1.txt'
+
+17) rm file1.txt     to remove from directory
+
+18)git commit -m "deleted file2.txt"
+
+19)to restore deleted file
+
+
+20) to undo changes to file content before adding
+git checkout .
+
+video 4
+21)to checkout to different commit versions
+git checkout hashcode(copy/paste)
+
+22)to see difference b/w commited file and nnew changes to thatfile
+git diff
+
+23)to see difference b/w a farticular file
+git diff filename
+
+24)if the changes hv been staged,and to see the difference
+git diff --staged
+or
+git diff --cached
+
+25) to compare our latest vetrsion with initial commits
+git diff (initial commit)hashcode
+
+like wise we can see the diff with any version 
+
+26)to see diff b/w two commits
+git diff hashcode of onecommit hashcode of second commit
+
+27)to see diff b/w previous two versions
+git diff HEAD HEAD~
+
+head=latest
+head~=head-1
+head~2
+
+
+28)git show
+
+29)git blame filename [shows comple history till last changes]
+30)git reflog[just like log --oneline]
+31)git help show [user manual]
+
+video 5
+TAGGING in git-to mark commit stage as important(bookmark)
+lightweight and annotated tag
+
+
+32) default (tagging to latest commits)
+lightweight tag
+git tag tagname
+git tag tag1
+33)to display the name of tag
+git tag
+33)for annotated tag
+git commit -am "msg"
+
+git tag -a tagname -m "msg"
+git tag -a v2 -m "tag2"
+
+34)to show the details diffrence of tags
+git show v3
+(git show tagname)
+
+35)to set tag in old commits
+ git tag -a tagname hashcodeof commit -m "msg"
+ git tag -a iniver 0e98101 -m "initial version"
+36)to view log detail along with tagname
+git log --oneline --decorate
+
+37)delete an unwanted tag
+git tag -d tagname
+38)to check whether tag is deleted or not
+git tag
+
+
+video 6
+branching
+39)to see default branch
+git branch
+40)to create new branch
+git branch branchname
+41)to go to new branch
+git checkout branchname
+
+42)to merge the work to master branch
+
+43)to forcefully exit from a branch without commiting changes to 
+git checkout --force master
+
+44)to save changes temporarily and switch to another branch
+git stash  save "msg"
+
+45)to delete a branch 
+git branch -d branchname
+
+46)undo a  resent commit 
+git reset --hard HEAD~
+HEAD is now at dcaf3c0 bismitry branch
+
+47) to compare two branches
+ git diff bismi2 bismi2
+          (branch1) (branch2)
+48)to rename a branch
+git branch -m bismi bismi1
+
+49)to undo changes in staging
+git reset HEAD file1.txt
+Unstaged changes after reset:
+M	file1.txt
+   
+50)to create and checkout  a branch in one step
+git checkout -b bismi2
+
+M	file1.txt
+Switched to a new branch 'bismi2'
+
+
+
+
+
+
+
+
+
+
+
