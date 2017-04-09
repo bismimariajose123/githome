@@ -1,1 +1,1 @@
-modification for commit -a -m
+commit -am
