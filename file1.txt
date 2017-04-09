@@ -2,3 +2,5 @@ commit -am
 new changess
 ammend worked
 amend working
+reset staging index...
+deleting a branch
