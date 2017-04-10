@@ -198,6 +198,44 @@ M	file1.txt
 Switched to a new branch 'bismi2'
 
 
+51)to rename a file in git repository
+ git mv file1.txt file1
+ ls
+  file1  file2.txt  gitdoc1
+52)to move a file from 1 directory to another
+
+53) to delete a file from git
+git rm file2.txt 
+rm 'file2.txt'
+
+
+54)to delete a directory recursively from git 
+ git rm -r dir1/
+rm 'dir1/file1'
+55) to restore a deleted directory after changes have been staged
+first after deleting a directory add the changes to repository
+then
+git reset HEAD dir1/
+
+Unstaged changes after reset:
+D	dir1/file1
+
+ git checkout dir2/
+
+56)to connectwith remote repo
+   i)sign in github
+   ii)create a repository
+  iii)copy the url from clone
+   iv) git remote add home https://github.com/bismimariajose123/githome.git
+57) to  view the name of remote repo
+git remote
+58) to rename git remote repository
+git remote rename origin newrepo1
+
+59)to push first time to remote
+ git push -f origin master
+
+
 
 
 
